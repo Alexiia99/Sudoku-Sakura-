@@ -62,19 +62,12 @@ Este proyecto fue desarrollado como parte de mis estudios en **Desarrollo de Apl
 
 ## 🖼️ Capturas de Pantalla
 
-> **Nota**: Añade capturas de pantalla en una carpeta `/screenshots` en tu repositorio
 
 ### Menú Principal
-![Menú Principal](screenshots/menu.png)
-
-### Selección de Dificultad
-![Dificultad](screenshots/difficulty.png)
+![Menú Principal](Screenshots/menu.png)
 
 ### Tablero de Juego
-![Juego](screenshots/game.png)
-
-### Estadísticas
-![Estadísticas](screenshots/statistics.png)
+![Juego](Screenshots/game.png)
 
 ---
 
@@ -376,3 +369,4 @@ Desarrolladora graduada en DAM, especializada en desarrollo de aplicaciones móv
 **¿Te gusta el proyecto? ¡Dale una ⭐ en GitHub!**
 
 Hecho con ❤️ y mucho ☕ por [Alexia Herrador](https://github.com/alexia-herrador)
+
