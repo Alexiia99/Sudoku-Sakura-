@@ -341,9 +341,9 @@ Este proyecto está bajo la Licencia MIT.
 
 Desarrolladora graduada en DAM, especializada en desarrollo de aplicaciones móviles y backend.
 
-- 🌐 Portfolio: [alexia-herrador.dev](https://alexia-herrador.dev)
-- 💼 LinkedIn: [linkedin.com/in/alexia-herrador-jimenez](https://linkedin.com/in/alexia-herrador-jimenez)
-- 🐙 GitHub: [@alexia-herrador](https://github.com/alexia-herrador)
+- 🌐 Portfolio: [alexia-herrador.dev](https://alexiia99.github.io/Portfolio/)
+- 💼 LinkedIn: [linkedin.com/in/alexia-herrador-jimenez](https://www.linkedin.com/in/alexia-herrador-jimenez-3a5906170/)
+- 🐙 GitHub: [@alexia-herrador](https://github.com/alexiia99)
 - 📧 Email: alexiahj111@gmail.com
 
 ---
@@ -369,4 +369,5 @@ Desarrolladora graduada en DAM, especializada en desarrollo de aplicaciones móv
 **¿Te gusta el proyecto? ¡Dale una ⭐ en GitHub!**
 
 Hecho con ❤️ y mucho ☕ por [Alexia Herrador](https://github.com/alexia-herrador)
+
 
