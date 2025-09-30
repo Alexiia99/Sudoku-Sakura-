@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.sudoku.sakura.controllers.StatisticsController"
+            styleClass="scroll-pane"
+            fitToWidth="true"
+            hbarPolicy="NEVER">
+
+    <VBox alignment="TOP_CENTER" spacing="20.0" styleClass="root">
+
+        <padding>
+            <Insets top="30" right="30" bottom="30" left="30"/>
+        </padding>
+
+        <Label text="ESTADÍSTICAS"
+               style="-fx-font-size: 40px; -fx-font-weight: 700; -fx-text-fill: #2C2C2C; -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.9), 6, 0, 0, 0);"/>
+
+        <!-- Stats generales -->
+        <VBox styleClass="stat-panel" spacing="0" maxWidth="500">
+
+            <HBox styleClass="stat-row">
+                <Label text="Partidas jugadas:" styleClass="stat-label" HBox.hgrow="ALWAYS"/>
+                <Label fx:id="gamesPlayedLabel" text="0" styleClass="stat-value"/>
+            </HBox>
+
+            <HBox styleClass="stat-row">
+                <Label text="Victorias:" styleClass="stat-label" HBox.hgrow="ALWAYS"/>
+                <Label fx:id="gamesWonLabel" text="0" styleClass="stat-value"/>
+            </HBox>
+
+            <HBox styleClass="stat-row">
+                <Label text="Derrotas:" styleClass="stat-label" HBox.hgrow="ALWAYS"/>
+                <Label fx:id="gamesLostLabel" text="0" styleClass="stat-value"/>
+            </HBox>
+
+            <HBox styleClass="stat-row">
+                <Label text="Tasa de éxito:" styleClass="stat-label" HBox.hgrow="ALWAYS"/>
+                <Label fx:id="winRateLabel" text="0%" styleClass="stat-value"/>
+            </HBox>
+
+        </VBox>
+
+        <!-- Mejores tiempos -->
+        <Label text="MEJORES TIEMPOS"
+               style="-fx-font-size: 24px; -fx-font-weight: 700; -fx-text-fill: #2C2C2C; -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.9), 5, 0, 0, 0);"/>
+
+        <VBox styleClass="stat-panel" spacing="0" maxWidth="500">
+
+            <HBox styleClass="stat-row">
+                <Label text="Fácil:" styleClass="stat-label" HBox.hgrow="ALWAYS"/>
+                <Label fx:id="easyBestLabel" text="--:--" styleClass="stat-value"/>
+            </HBox>
+
+            <HBox styleClass="stat-row">
+                <Label text="Normal:" styleClass="stat-label" HBox.hgrow="ALWAYS"/>
+                <Label fx:id="normalBestLabel" text="--:--" styleClass="stat-value"/>
+            </HBox>
+
+            <HBox styleClass="stat-row">
+                <Label text="Difícil:" styleClass="stat-label" HBox.hgrow="ALWAYS"/>
+                <Label fx:id="hardBestLabel" text="--:--" styleClass="stat-value"/>
+            </HBox>
+
+        </VBox>
+
+        <!-- Otros stats -->
+        <VBox styleClass="stat-panel" spacing="0" maxWidth="500">
+
+            <HBox styleClass="stat-row">
+                <Label text="Tiempo promedio:" styleClass="stat-label" HBox.hgrow="ALWAYS"/>
+                <Label fx:id="avgTimeLabel" text="00:00" styleClass="stat-value"/>
+            </HBox>
+
+            <HBox styleClass="stat-row">
+                <Label text="Pistas totales usadas:" styleClass="stat-label" HBox.hgrow="ALWAYS"/>
+                <Label fx:id="hintsUsedLabel" text="0" styleClass="stat-value"/>
+            </HBox>
+
+            <HBox styleClass="stat-row">
+                <Label text="Racha actual:" styleClass="stat-label" HBox.hgrow="ALWAYS"/>
+                <Label fx:id="currentStreakLabel" text="0" styleClass="stat-value"/>
+            </HBox>
+
+            <HBox styleClass="stat-row">
+                <Label text="Mejor racha:" styleClass="stat-label" HBox.hgrow="ALWAYS"/>
+                <Label fx:id="bestStreakLabel" text="0" styleClass="stat-value"/>
+            </HBox>
+
+        </VBox>
+
+        <!-- Botones -->
+        <HBox spacing="15" alignment="CENTER">
+            <Button text="Reiniciar" onAction="#handleReset"
+                    styleClass="button-secondary" prefWidth="200" prefHeight="50"/>
+            <Button text="Volver" onAction="#handleBack"
+                    styleClass="button" prefWidth="200" prefHeight="50"/>
+        </HBox>
+
+        <VBox prefHeight="20"/>
+
+    </VBox>
+
+</ScrollPane>

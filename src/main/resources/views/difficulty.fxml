@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.GridPane?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.sudoku.sakura.controllers.DifficultyController"
+      styleClass="root">
+
+    <padding>
+        <Insets top="40" right="40" bottom="40" left="40"/>
+    </padding>
+
+    <Label text="Selecciona la dificultad" styleClass="subtitle"/>
+
+    <VBox spacing="15" alignment="CENTER" maxWidth="500">
+
+        <GridPane hgap="15" vgap="15" alignment="CENTER">
+
+            <!-- Fácil -->
+            <VBox styleClass="difficulty-card" onMouseClicked="#handleEasy"
+                  spacing="10" alignment="CENTER" prefWidth="200" prefHeight="150"
+                  GridPane.columnIndex="0" GridPane.rowIndex="0">
+                <Label text="FÁCIL" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #DB7093;"/>
+                <Label text="⭐⭐⭐" style="-fx-font-size: 18px;"/>
+                <Label text="30-35 celdas vacías" style="-fx-font-size: 12px; -fx-text-fill: #4A4A4A;"/>
+            </VBox>
+
+            <!-- Normal -->
+            <VBox styleClass="difficulty-card" onMouseClicked="#handleNormal"
+                  spacing="10" alignment="CENTER" prefWidth="200" prefHeight="150"
+                  GridPane.columnIndex="1" GridPane.rowIndex="0">
+                <Label text="NORMAL" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #DB7093;"/>
+                <Label text="⭐⭐⭐⭐" style="-fx-font-size: 18px;"/>
+                <Label text="40-45 celdas vacías" style="-fx-font-size: 12px; -fx-text-fill: #4A4A4A;"/>
+            </VBox>
+
+        </GridPane>
+
+        <!-- Difícil (centrado) -->
+        <VBox styleClass="difficulty-card" onMouseClicked="#handleHard"
+              spacing="10" alignment="CENTER" prefWidth="415" prefHeight="150">
+            <Label text="DIFÍCIL" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #DB7093;"/>
+            <Label text="⭐⭐⭐⭐⭐" style="-fx-font-size: 18px;"/>
+            <Label text="50-55 celdas vacías" style="-fx-font-size: 12px; -fx-text-fill: #4A4A4A;"/>
+        </VBox>
+
+    </VBox>
+
+    <VBox prefHeight="20"/>
+
+    <Button text="← Volver" onAction="#handleBack" styleClass="button-secondary"/>
+
+</VBox>

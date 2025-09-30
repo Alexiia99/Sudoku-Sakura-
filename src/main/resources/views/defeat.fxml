@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.sudoku.sakura.controllers.DefeatController"
+      styleClass="root">
+
+    <padding>
+        <Insets top="40" right="40" bottom="40" left="40"/>
+    </padding>
+
+    <Label text="GAME OVER 💔"
+           style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #FF6B6B;"/>
+
+    <Label text="Se acabaron las vidas"
+           style="-fx-font-size: 16px; -fx-text-fill: #4A4A4A;"/>
+
+    <VBox prefHeight="20"/>
+
+    <VBox styleClass="panel" spacing="15" maxWidth="350">
+        <padding>
+            <Insets top="20" right="20" bottom="20" left="20"/>
+        </padding>
+
+        <Label fx:id="timeLabel" text="⏱️  Tiempo jugado: 00:00"
+               style="-fx-font-size: 16px; -fx-text-fill: #4A4A4A;"/>
+        <Label fx:id="hintsLabel" text="💡 Pistas usadas: 0"
+               style="-fx-font-size: 16px; -fx-text-fill: #4A4A4A;"/>
+    </VBox>
+
+    <VBox prefHeight="10"/>
+
+    <VBox alignment="CENTER" spacing="15" maxWidth="300">
+        <Button text="REINTENTAR" onAction="#handleRetry"
+                maxWidth="Infinity" styleClass="button"/>
+        <Button text="MENÚ PRINCIPAL" onAction="#handleMainMenu"
+                maxWidth="Infinity" styleClass="button-secondary"/>
+    </VBox>
+
+</VBox>

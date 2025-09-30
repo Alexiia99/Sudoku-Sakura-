@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.GridPane?>
+
+<VBox alignment="TOP_CENTER" spacing="15.0" xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.sudoku.sakura.controllers.GameController"
+      styleClass="root">
+
+    <padding>
+        <Insets top="10" right="20" bottom="10" left="20"/>
+    </padding>
+
+    <!-- Header con vidas, tiempo y pistas -->
+    <HBox spacing="25" alignment="CENTER" style="-fx-background-color: rgba(255, 255, 255, 0.8); -fx-background-radius: 15px; -fx-padding: 8px 20px;">
+        <Label fx:id="livesLabel" text="♥ ♥ ♥"
+               style="-fx-font-size: 24px; -fx-text-fill: #FF6B6B; -fx-font-weight: 700;"/>
+        <Label fx:id="timerLabel" text="00:00" styleClass="timer"/>
+        <Label fx:id="hintsLabel" text="Pistas: 3" styleClass="hints"/>
+    </HBox>
+
+    <Label fx:id="difficultyLabel" text="Dificultad: Normal"
+           style="-fx-font-weight: 700; -fx-font-size: 17px; -fx-text-fill: #C5305E; -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.8), 4, 0, 0, 0);"/>
+
+    <!-- Tablero de Sudoku -->
+    <GridPane fx:id="boardGrid" styleClass="sudoku-board"
+              hgap="0" vgap="0" alignment="CENTER">
+    </GridPane>
+
+    <!-- Teclado numérico -->
+    <GridPane hgap="12" vgap="12" alignment="CENTER">
+        <Button text="1" onAction="#handleNumber1" styleClass="number-button"
+                prefWidth="70" prefHeight="70" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <Button text="2" onAction="#handleNumber2" styleClass="number-button"
+                prefWidth="70" prefHeight="70" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        <Button text="3" onAction="#handleNumber3" styleClass="number-button"
+                prefWidth="70" prefHeight="70" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+        <Button text="4" onAction="#handleNumber4" styleClass="number-button"
+                prefWidth="70" prefHeight="70" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+        <Button text="5" onAction="#handleNumber5" styleClass="number-button"
+                prefWidth="70" prefHeight="70" GridPane.columnIndex="4" GridPane.rowIndex="0"/>
+
+        <Button text="6" onAction="#handleNumber6" styleClass="number-button"
+                prefWidth="70" prefHeight="70" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <Button text="7" onAction="#handleNumber7" styleClass="number-button"
+                prefWidth="70" prefHeight="70" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Button text="8" onAction="#handleNumber8" styleClass="number-button"
+                prefWidth="70" prefHeight="70" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+        <Button text="9" onAction="#handleNumber9" styleClass="number-button"
+                prefWidth="70" prefHeight="70" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+        <Button text="X" onAction="#handleClear" styleClass="number-button"
+                prefWidth="70" prefHeight="70" GridPane.columnIndex="4" GridPane.rowIndex="1"
+                style="-fx-background-color: #FFE4EB; -fx-text-fill: #DB7093; -fx-font-size: 26px; -fx-font-weight: 700;"/>
+    </GridPane>
+
+    <!-- Botones de control -->
+    <HBox spacing="12" alignment="CENTER">
+        <Button fx:id="hintButton" text="Pista" onAction="#handleHint"
+                styleClass="button-hint" prefWidth="160" prefHeight="50"/>
+        <Button fx:id="verifyButton" text="Verificar" onAction="#handleVerify"
+                styleClass="button-verify" prefWidth="160" prefHeight="50"/>
+        <Button fx:id="pauseButton" text="Pausa" onAction="#handlePause"
+                styleClass="button-secondary" prefWidth="160" prefHeight="50"/>
+    </HBox>
+
+    <Button text="Menú" onAction="#handleMenu"
+            styleClass="button-secondary" prefWidth="160" prefHeight="50"/>
+
+</VBox>
